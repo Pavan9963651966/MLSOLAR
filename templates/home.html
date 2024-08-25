@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Solar Panel Defect Prediction</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Solar Panel Defect Prediction</h1>
+
+        <form action="{{ url_for('predict_datapoint') }}" method="post">
+            <h1>
+                <legend>Predict Defective or Non-Defective Solar Panel</legend>
+            </h1>
+
+            <div class="mb-3">
+                <label class="form-label">Time</label>
+                <input class="form-control" type="number" name="Time" placeholder="Enter Time" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Ipv (Photovoltaic Current)</label>
+                <input class="form-control" type="number" name="Ipv" placeholder="Enter Ipv" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Vpv (Photovoltaic Voltage)</label>
+                <input class="form-control" type="number" name="Vpv" placeholder="Enter Vpv" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Vdc (DC Voltage)</label>
+                <input class="form-control" type="number" name="Vdc" placeholder="Enter Vdc" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">ia</label>
+                <input class="form-control" type="number" name="ia" placeholder="Enter ia" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">ib</label>
+                <input class="form-control" type="number" name="ib" placeholder="Enter ib" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">ic</label>
+                <input class="form-control" type="number" name="ic" placeholder="Enter ic" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">va</label>
+                <input class="form-control" type="number" name="va" placeholder="Enter va" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">vb</label>
+                <input class="form-control" type="number" name="vb" placeholder="Enter vb" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">vc</label>
+                <input class="form-control" type="number" name="vc" placeholder="Enter vc" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Iabc</label>
+                <input class="form-control" type="number" name="Iabc" placeholder="Enter Iabc" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">If</label>
+                <input class="form-control" type="number" name="If" placeholder="Enter If" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Vabc</label>
+                <input class="form-control" type="number" name="Vabc" placeholder="Enter Vabc" required />
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Vf</label>
+                <input class="form-control" type="number" name="Vf" placeholder="Enter Vf" required />
+            </div>
+            
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict Defective Status" />
+            </div>
+        </form>
+
+        <h2>
+            The prediction is: {{ results }}
+        </h2>
+    </div>
+</body>
+</html>
