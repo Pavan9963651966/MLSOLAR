@@ -21,7 +21,7 @@ class PredictPipeline:
         
         except Exception as e:
             raise CustomException(e,sys)
-
+    
 
 class CustomData:
     def __init__(
